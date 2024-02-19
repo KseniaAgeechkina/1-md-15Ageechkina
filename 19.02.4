@@ -1,0 +1,15 @@
+col1 = input()
+col2 = input()
+color = ("желтый","синий","красный")
+if col1 in color and col2 in color:
+    if col1 != col2:
+        if col1 in ("красный","синий") and col2 in ("красный","синий"):
+            print("фиолетовый")
+        if col1 in ("красный", "желтый") and col2 in ("красный", "желтый"):
+            print("оранжевый")
+        if col1 in ("желтый", "синий") and col2 in ("желтый", "синий"):
+            print("зеленый")
+    else:
+        print(col1)
+else:
+    print("Ошибка в цвете")
