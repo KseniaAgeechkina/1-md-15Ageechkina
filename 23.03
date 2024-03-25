@@ -1,0 +1,39 @@
+def num_1():
+    a = [15,36,100,5,7]
+    number = int(input())
+    if number in a:
+        print("Ваше число есть в списке")
+    else:
+        print("Вашего числа нет в списке")
+
+
+def num_2():
+    list = [1,4,6,5,5,3]
+    mlist = set(list)
+    for i in mlist:
+        count = list.count(i)
+        if count > 1:
+            print("число", i, 'встречается', count)
+
+
+def num_3():
+    a = ('Понедельник', 'Вторник', 'Среда', 'четверг', 'Пятница', 'Суббота', 'Воскресенье')
+    kol = int(input("Введите количество выходных"))
+    print("Ваши выходные дни:", a[-kol::])
+    print("Ваши рабочие дни:", a[:-kol])
+num_3()
+
+def num_4():
+    fam2 = ("Котов", "Смирнов", "Канаева", "Иванов", "Смирнов", "Лисицин", "Попов", "Сладков", "Звизжов", "Трефилов")
+    fam1 = ("Aпкаликова", "Агеечкина", "Розина", "Нерсисян", "Иванов", "Удовкин", "Коченков", "Пичуева", "Павлова", "Горбачева")
+    group = (fam1[:5] + fam2[-5:])
+
+    print(group)
+    print(fam1)
+    print(fam2)
+    print(len(group + fam1 + fam2))
+    if "Иванов" in group:
+        count = group.count("Иванов")
+        print("Иванов есть в группе", count)
+    temp = sorted(group)
+    print(temp)
