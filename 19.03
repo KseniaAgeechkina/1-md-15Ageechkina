@@ -1,0 +1,53 @@
+def n1()
+    def function(a):
+        if a % 3 == 0:
+            return "делиться"
+        else:
+            return "Не делится"
+    c = int(input())
+    res = function(c)
+    
+    print(res)
+    
+def function():
+    try:
+        a = float(input())
+        res = 100/a
+        print(res)
+    except ZeroDivisionError:
+        a = 0
+        print("Ошибка в нуле ноль")
+    except ValueError:
+        print("Ошибка в строке")
+
+function()
+
+def magic(d,m,g):
+    if d * m == g % 100:
+        ot = True
+    else:
+        ot = False
+    return ot
+
+d = int(input("Введите День"))
+m = int(input("Введите Месяц"))
+g = int(input("Введите Год"))
+
+res = magic(d,m,g)
+print(res)
+
+def happy(a):
+    sum1 = sum2 = 0
+    pol = len(a) // 2
+    for i in range(len(a)):
+        if i < pol:
+            sum1 += int(a[i])
+        else:
+            sum2 += int(a[i])
+    if sum1 == sum2:
+        return "Счастливый"
+    else:
+        return "НЕ счастливый"
+
+c = (input())
+print(happy(c))
