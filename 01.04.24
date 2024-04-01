@@ -1,0 +1,34 @@
+def num_1():
+    diction = {"Эстония":"Таллин","Литва":"Вильнюс","Аргентина":"Буенос-Айрес","Россия":"Москва"}
+    print("№1")
+    print(diction)
+    for key in diction:
+        print(key, diction[key])
+
+    print("№2")
+    c = (input())
+    if c in diction:
+        print(diction[c])
+    else:
+        print("Введите другую страну")
+
+    print("№3")
+    dict2 = sorted(diction.items())
+    print(dict2)
+
+    dict2 = list(diction.keys())
+    dict2.sort()
+    for i in dict2:
+        print(i, "-", diction[i])
+
+def n2():
+    word = (input())
+    summ = 0
+    slova = {"А, В, Е, И, Н, О, Р, С, Т":1,"Д, К, Л, М, П, У":2,"Б, Г, Ё, Ь, Я":3,"Й, Ы ":4,"Ж, З, Х, Ц, Ч":5,'Ш, Э, Ю':8,"Ф, Щ, Ъ":10}
+    for i in word:
+        for key in slova:
+            if i in key:
+                summ += (slova.get(key))
+    print(summ)
+
+num_1()
