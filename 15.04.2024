@@ -1,0 +1,26 @@
+def num1():
+    from PIL import Image
+    image = Image.open('Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\котя.jpeg')
+    image.show()
+    print(f"Формат картинки:{image.format}")
+    print(f"Размер картинки:{image.size}")
+    print(f"Цветовая модель картинки:{image.mode}")
+
+
+
+def num2(in_path,out_path):
+    from PIL import Image
+    kit = Image.open(in_path)
+    wi = int(kit.width)//3
+    he = int(kit.height)//3
+    new_img = kit.resize((wi,he))
+    new_img.save(out_path)
+    new_img.show()
+
+    kit_1 = new_img.transpose(Image.FlIP_TOP_BOTTOM)
+    kit_1.show()
+    kit_1.save('Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\котя новый2.jpeg')
+    kit_2 = new_img.transpose(Image.FlIP_LEFT_RIGHT)
+    kit_2.show()
+    (kit_2.save('Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\котя новый3.jpeg'))
+num2('Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\котя.jpeg','Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\котя новый.jpeg',)
