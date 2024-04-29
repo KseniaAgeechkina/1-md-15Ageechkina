@@ -17,10 +17,33 @@ def num2(in_path,out_path):
     new_img.save(out_path)
     new_img.show()
 
-    kit_1 = new_img.transpose(Image.FlIP_TOP_BOTTOM)
+    kit_1 = new_img.transpose(Image.FlIP_LEFT_RIGHT)
     kit_1.show()
     kit_1.save('Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\котя новый2.jpeg')
-    kit_2 = new_img.transpose(Image.FlIP_LEFT_RIGHT)
+    kit_2 = new_img.transpose(Image.FlIP_TOP_BOTTOM)
     kit_2.show()
-    (kit_2.save('Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\котя новый3.jpeg'))
-num2('Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\котя.jpeg','Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\котя новый.jpeg',)
+    kit_2.save('Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\котя новый3.jpeg')
+    num2('Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\котя.jpeg','Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\котя новый.jpeg',)
+
+def num3(pict):
+    from PIL import Image
+    for i in pict:
+        p1 = Image.open(i)
+        p1.show()
+        filt = p1.filter(ImageFilter.SHARPEN)
+        filt.save('Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\{i+imagesss.jpg}')
+num3(["Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\11.jpg",
+      "Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\2.jpg",
+      "Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\3.jpg",
+      "Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\4.jpg",
+      "Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\5.jpg"])
+
+def num4(in_path,out_path):
+    from PIL import Image, ImageDraw, ImageDraw
+    photo = Image.open(in_path)
+    draw = ImageDraw.Draw(photo)
+    text = "pypy"
+    draw.text((10,10),text,font=font)
+    photo.show()
+    num4('Z:\\1-МД-15\\Агеечкина Ксения_алгоритмы\\котя.jpeg')
+    pass
