@@ -1,0 +1,34 @@
+from PIL import Image
+def num1():
+  pic = Image.open("открыткасестре.jpg")
+  pic.show()
+  result = pic.crop((232, 171, 903, 843))
+  result.save("newоткрытка1.jpg")
+  result.show()
+num1()
+
+from PIL import Image
+def num2():
+  otkr = {"hb":"hb.jpg","8m":"8m.jpg","23f":"28f.jpg"}
+  holiday = input("Какой праздник? ")
+  if holiday in otkr:
+    result = otkr[holiday]
+    if result is not None:
+      ot = Image.open(result)
+      ot.show()
+    else:
+      print("ошибка")
+  else:
+    print("Для такого праздника открытки нет")
+num2()
+
+from PIL import Image, ImageDraw, ImageFont
+def num3():
+    name = input("Кого хотите поздравить? ")
+    pic = Image.open("открыткасестре.jpg")
+    font = ImageFont.load_default()
+    result = pic.crop((200, 90, 850, 900))
+    draw_text = ImageDraw.Draw(result)
+    draw_text.text((215, 100),  f"{name} ПОЗДРАВЛЯЮ!!!",  stroke_width=(1), font_size=30, fill=(255,0,0))
+    result.show()
+num3()
