@@ -1,0 +1,28 @@
+import json
+def num1():
+    with open("lab10.json", mode="r", encoding='utf8') as file:
+        rfile = json.load(file)
+        secondfile = (rfile['products'])
+        for i in range(3):
+            print("Название", secondfile[i]['name'])
+            print("Цена", secondfile[i]['price'])
+            print("Вес", secondfile[i]['weight'])
+            if secondfile[i]['available'] == True:
+                print("В наличии")
+            else:
+                print("Нет в наличии!")
+
+def num2():
+    dic = {}
+    with open("словарь.txt", mode="r", encoding='utf8') as file:
+        lines = file.read().splitlines()
+        for line in lines:
+            key, value = line.strip().split(' - ')
+            dic.update({key:value})
+    print(dic)
+
+    with open('ru-en.txt', 'w', encoding='utf-8') as f:
+        for ru_word, en_word in sorted(dic.items()):
+            f.write(f'{ru_word} - {en_word}\n')
+    print(dic)
+num2()
