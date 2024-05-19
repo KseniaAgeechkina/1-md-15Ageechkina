@@ -1,5 +1,6 @@
+import os
 import json
-def num1():
+def num1-2():
     with open("lab10.json", mode="r", encoding='utf8') as file:
         rfile = json.load(file)
         secondfile = (rfile['products'])
@@ -12,7 +13,7 @@ def num1():
             else:
                 print("Нет в наличии!")
 
-def num2():
+def num3():
     dic = {}
     with open("словарь.txt", mode="r", encoding='utf8') as file:
         lines = file.read().splitlines()
@@ -25,4 +26,4 @@ def num2():
         for ru_word, en_word in sorted(dic.items()):
             f.write(f'{ru_word} - {en_word}\n')
     print(dic)
-num2()
+num3()
