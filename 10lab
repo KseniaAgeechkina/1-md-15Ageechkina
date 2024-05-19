@@ -36,7 +36,7 @@ def num1-2():
 
     with open('lab10.json', 'w') as file:
         json.dump(rfile, file, indent=2)
-
+#indent-отступы при сериализации (переводданныхвстроковыепредставления)
     for product in rfile['products']:
         availability = "В наличии" if product['available'] else "Нет в наличии!"
         print(f"Название: {product['name']}")
