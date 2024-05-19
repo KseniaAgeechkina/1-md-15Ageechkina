@@ -21,7 +21,6 @@ print(newRestaurant.cuisine_type)
 newRestaurant.describe_restaurant()
 newRestaurant.open_restaurant()
 newRestaurant.rating(4)
-newRestaurant.describe_restaurant()
 
 
 
