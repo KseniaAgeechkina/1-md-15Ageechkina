@@ -13,10 +13,10 @@ class Restaurant:
         self.rating = new_rating
         print(f"Рейтинг ресторана {self.restaurant_name} обновлен! Новый рейтинг: {self.rating}")
 newRestaurant = Restaurant("WineGogh", "голландская")
-
+#атрибуты
 print(newRestaurant.restaurant_name)
 print(newRestaurant.cuisine_type)
-
+#методы
 newRestaurant.describe_restaurant()
 newRestaurant.open_restaurant()
 
