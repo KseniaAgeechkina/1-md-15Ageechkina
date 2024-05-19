@@ -1,6 +1,6 @@
 import os
 import json
-def num1-2():
+def probnai():
     with open("lab10.json", mode="r", encoding='utf8') as file:
         rfile = json.load(file)
         secondfile = (rfile['products'])
