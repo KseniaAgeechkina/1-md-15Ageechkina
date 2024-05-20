@@ -1,0 +1,23 @@
+import os
+import csv
+from pathlib import Path
+from PIL import Image, ImageFilter
+def num1_2():
+    os.mkdir("images")
+    for i in os.listdir():
+        if Path(i).suffix == ".jpg":
+            image = Image.open(i)
+            img_smooth = image.filter(ImageFilter.DETAIL)
+            img_smooth.save(f'filters({i}).jpg')
+            f = open(os.path.join("papa", f'filters({i}).jpg'), 'a')
+            os.remove(f'filters({i}).jpg')
+        else:
+            f = open(os.path.join("images", i), 'a')
+            os.remove(i)
+def num3():
+    print("Нужно купить:")
+    with open('number2.csv', mode='r') as file:
+        rfile = csv.reader(file)
+        for row in rfile:
+            name, k, price = "".join(row).split(";")
+            print(f"{name} - {k} шт. за {price} руб.")
